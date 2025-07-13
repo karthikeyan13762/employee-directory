@@ -18,28 +18,6 @@
     </div>
   </header>
 
-  <!-- Filter Section (hidden by default) -->
-  <section id="filterSection" class="filter-section hidden">
-    <label>
-      Department:
-      <select id="filterDepartment">
-        <option value="">All</option>
-        <option value="IT">IT</option>
-        <option value="HR">HR</option>
-      </select>
-    </label>
-    <label>
-      Role:
-      <select id="filterRole">
-        <option value="">All</option>
-        <option value="Frontend Developer">Frontend Developer</option>
-        <option value="Manager">Manager</option>
-      </select>
-    </label>
-    <button onclick="applyFilter()">Apply</button>
-  </section>
-
-
 <!-- Main Section -->
 <main class="main">
   <div class="main-controls">
@@ -63,6 +41,11 @@
   </div>
 
   <div id="employeeList" class="employee-list"></div>
+  <div class="pagination">
+  <button onclick="prevPage()" id="prevBtn">Previous</button>
+  <span id="pageInfo"></span>
+  <button onclick="nextPage()" id="nextBtn">Next</button>
+</div>
 </main>
   <!-- Footer Section -->
   <footer class="footer">

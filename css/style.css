@@ -7,11 +7,10 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  
- 
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 /* Header */
@@ -202,6 +201,19 @@ footer.footer p{
 
 .card button:last-child:hover {
   background-color: #b02a37;
+}
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+  gap: 1rem;
+}
+
+.pagination button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
 }
 
 /* Responsive adjustments */
