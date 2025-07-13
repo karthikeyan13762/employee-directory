@@ -14,7 +14,7 @@
       <input type="text" id="search" placeholder="Search by name or email...">
     </div>
     <div class="header-right">
-      <button>Filter</button>
+      <button onclick="toggleFilter()">Filter</button>
     </div>
   </header>
 
@@ -36,7 +36,7 @@
         <option value="Manager">Manager</option>
       </select>
     </label>
-    <button >Apply</button>
+    <button onclick="applyFilter()">Apply</button>
   </section>
 
 
@@ -45,20 +45,20 @@
   <div class="main-controls">
     <div class="left-controls">
       <label for="sort">Sort:</label>
-      <select id="sort" >
+      <select id="sort" onchange="sortEmployees()">
         <option value="firstName">First Name</option>
         <option value="department">Department</option>
       </select>
 
       <label for="pageSize">Show:</label>
-      <select id="pageSize" >
+      <select id="pageSize" onchange="renderEmployees()">
         <option value="10">10</option>
         <option value="25">25</option>
         <option value="50">50</option>
       </select>
     </div>
     <div class="right-controls">
-      <button >Add Employee</button>
+      <button onclick="openForm()">Add Employee</button>
     </div>
   </div>
 

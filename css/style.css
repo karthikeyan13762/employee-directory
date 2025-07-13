@@ -136,6 +136,86 @@ footer.footer {
 footer.footer p{
     margin-left: 3em;
 }
+/* Container holding all employee cards */
+.employee-list {
+  display: flex;
+  flex-wrap: wrap;           /* Allow wrapping on smaller screens */
+  gap: 20px;                 /* Space between cards */
+  padding: 20px;
+  justify-content: center;
+}
+
+/* Individual card style */
+.card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 16px 20px;
+  width: 280px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+  line-height: 1.6;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* Paragraphs inside card */
+.card p {
+  margin: 8px 0;
+  font-size: 15px;
+  margin-top: 1.5em;
+}
+
+/* Button group layout */
+.card div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+/* Buttons */
+.card button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 5rem;
+  transition: background-color 0.2s;
+}
+
+.card button:first-child {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.card button:first-child:hover {
+  background-color: #0056b3;
+}
+
+.card button:last-child {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.card button:last-child:hover {
+  background-color: #b02a37;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+    max-width: 90%;
+  }
+
+  .employee-list {
+    justify-content: flex-start;
+  }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .header {
