@@ -3,7 +3,13 @@ let currentPage = 1;
 
 // Load employees from localStorage
 const storedData = localStorage.getItem("employees");
-
+const search = document.getElementById("search").value.toLowerCase();
+const filtered = employees.filter(
+  (emp) =>
+    emp.firstName.toLowerCase().includes(search) ||
+    emp.lastName.toLowerCase().includes(search) ||
+    emp.email.toLowerCase().includes(search)
+);
 if (storedData) {
   employees = JSON.parse(storedData);
   renderEmployees();
