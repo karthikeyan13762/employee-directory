@@ -1,0 +1,161 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  
+ 
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  background-color: #333333;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  color: white;
+}
+
+.header-left {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.header-center {
+  flex: 1;
+  margin: 0 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.header-center input {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.header-right button {
+  padding: 0.6rem 1.2rem;
+  /* background-color: #d0d9dd; */
+  border: none;
+  border-radius: 1px;
+  color: rgb(70, 66, 66);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Filter Section */
+.filter-section {
+  display: flex;
+  gap: 1rem;
+  background-color: #444;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
+}
+
+.filter-section label {
+  color: white;
+  font-size: 0.9rem;
+}
+
+.filter-section select {
+  margin-left: 0.5rem;
+  padding: 0.4rem;
+}
+
+.filter-section.hidden {
+  display: none;
+}
+
+/* Main Section */
+main.main {
+  flex: 1;
+  padding: 2rem;
+  background-color: #ffffff;
+  overflow-y: auto;
+}
+
+.main-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.left-controls label,
+.right-controls button {
+  margin-right: 0.5rem;
+}
+
+.left-controls select {
+  margin-right: 1rem;
+  padding: 0.4rem;
+}
+
+.right-controls button {
+  background-color: #10b981;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Employee List */
+.employee-list {
+  min-height: 50vh;
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 8px;
+  
+}
+
+/* Footer */
+footer.footer {
+  background-color: #333333;
+  color: #ccc;
+  /* text-align: center; */
+  padding: 3rem 0;
+  font-size: 1.2rem;
+  
+}
+footer.footer p{
+    margin-left: 3em;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-center {
+    margin: 1rem 0;
+    width: 100%;
+  }
+
+  .main-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .left-controls,
+  .right-controls {
+    width: 100%;
+    justify-content: space-between;
+  }
+}

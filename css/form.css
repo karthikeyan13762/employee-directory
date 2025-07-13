@@ -1,0 +1,113 @@
+
+
+/* Reset & Base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f4f8;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Form title */
+h1#formTitle {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #131313;
+}
+
+/* Form container */
+form#employeeForm {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Input and label styling */
+form#employeeForm input[type="text"],
+form#employeeForm input[type="email"],
+form#employeeForm select {
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Label heading styling */
+label > p {
+  font-size: 1.4rem;
+  font-weight: normal;
+  margin-bottom: 0.3rem;
+}
+/* Role styling */
+form#employeeForm select#role {
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 1rem;
+}
+/* Row layout for email and department */
+.form-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.form-row .form-col {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* Button group */
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.button-group button {
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.button-group button[type="submit"] {
+  background-color: #0ea5e9;
+  color: white;
+}
+
+.button-group button[type="button"] {
+  background-color: white;
+  color: black;
+  outline: 1px solid #c5c3c3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+  }
+
+  .button-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

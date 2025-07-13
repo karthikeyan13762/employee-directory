@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Employee Directory</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+     <!-- Header Section -->
+  <header class="header">
+    <div class="header-left">Employee Directory</div>
+    <div class="header-center">
+      <input type="text" id="search" placeholder="Search by name or email...">
+    </div>
+    <div class="header-right">
+      <button>Filter</button>
+    </div>
+  </header>
+
+  <!-- Filter Section (hidden by default) -->
+  <section id="filterSection" class="filter-section hidden">
+    <label>
+      Department:
+      <select id="filterDepartment">
+        <option value="">All</option>
+        <option value="IT">IT</option>
+        <option value="HR">HR</option>
+      </select>
+    </label>
+    <label>
+      Role:
+      <select id="filterRole">
+        <option value="">All</option>
+        <option value="Frontend Developer">Frontend Developer</option>
+        <option value="Manager">Manager</option>
+      </select>
+    </label>
+    <button >Apply</button>
+  </section>
+
+
+<!-- Main Section -->
+<main class="main">
+  <div class="main-controls">
+    <div class="left-controls">
+      <label for="sort">Sort:</label>
+      <select id="sort" >
+        <option value="firstName">First Name</option>
+        <option value="department">Department</option>
+      </select>
+
+      <label for="pageSize">Show:</label>
+      <select id="pageSize" >
+        <option value="10">10</option>
+        <option value="25">25</option>
+        <option value="50">50</option>
+      </select>
+    </div>
+    <div class="right-controls">
+      <button >Add Employee</button>
+    </div>
+  </div>
+
+  <div id="employeeList" class="employee-list"></div>
+</main>
+  <!-- Footer Section -->
+  <footer class="footer">
+    <p>© 2025 Employee Directory. All rights reserved.</p>
+  </footer>
+
+
+  <script src="js/main.js"></script>
+</body>
+</html>
